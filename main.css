@@ -224,19 +224,3 @@ ul li::before {
   transform: translateY(-6px) scale(1.04);
   box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 }
-
-a {
-  text-decoration: none;
-  color: var(--theme-color-2);
-  cursor: pointer;
-  border-bottom: 1.5px dashed var(--theme-color-2); /* 破線にも色を明示 */
-  /* transition に border-color を追加 */
-  transition: background-color 0.5s, color 0.5s, border-bottom-color 0.5s; 
-}
-
-a:hover {
-  color: #333; /* ホバー時の文字色をより見やすい色に */
-  background-color: #b8d8ca; /* パステルミント系 */
-  border-radius: 4px;
-  border-bottom-color: transparent; /* 下線の色を透明にして滑らかに消す */
-}
