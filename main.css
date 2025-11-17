@@ -164,3 +164,13 @@ ul li::before {
   content: "\e139";
   color: #5c8f7b;
 }
+
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-box img {
+  width: 60%;
+}
