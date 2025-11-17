@@ -202,8 +202,8 @@ ul li::before {
 
 /* ホバーでふわっと浮く */
 .skill-item:hover {
-  transform: translateY(-8px);
-  box-shadow: rgba(0, 0, 0, 0.20) 0px 10px 20px;
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px;
 }
 
 .skill-item:hover img {
@@ -224,7 +224,7 @@ ul li::before {
   background: white;             /* ← ステッカーの白枠 */
   border-radius: 18px;           /* ← ステッカー風の丸み */
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: 0.3s;
+  transition:  transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-item:hover img {
