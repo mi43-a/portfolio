@@ -224,3 +224,12 @@ ul li::before {
   transform: translateY(-6px) scale(1.04);
   box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 }
+
+h1[id], h2[id] {
+  scroll-margin-top: 50px; /* ヘッダーの高さ（約45px）よりも少し大きめに設定 */
+}
+
+/* または、より具体的にIDを持つ全ての要素に適用する */
+:target {
+  scroll-margin-top: 50px;
+}
