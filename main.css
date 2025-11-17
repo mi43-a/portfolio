@@ -172,7 +172,9 @@ ul li::before {
 }
 
 .skill-box img {
-  width: 30%;
+  width: 120%;
+  max-width: 80%; /* ← はみ出し防止 */
+    height: auto;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: transform 0.3s ease;
