@@ -172,10 +172,10 @@ ul li::before {
   transition: transform 0.3s ease;
 }
 
-/* 2列グリッド */
+/* 3列グリッド */
 .skills-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* → 2列 */
+  grid-template-columns: 1fr 1fr 1fr; /* → 3列 */
   gap: 40px;
   margin-top: 20px;
 }
