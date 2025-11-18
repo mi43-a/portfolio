@@ -215,9 +215,11 @@ ol {
 }
 
 ul li, ol li {
-  margin-top: 0;
-  margin-bottom: 0em; 
+  margin-top: 2px;
+  margin-bottom: 2px; 
 }
+
+
 
 /* スマホは1列に */
 @media screen and (max-width: 600px) {
