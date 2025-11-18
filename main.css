@@ -219,7 +219,6 @@ ol {
   .skills-grid {
     grid-template-columns: 1fr;
   }
-
   .skill-item img {
     width: 120px;
     max-width: 80%;
@@ -231,7 +230,6 @@ ol {
     transition:  transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: none;
   }
-  
   .skill-item:hover img {
     transform: translateY(-6px) scale(1.04);
     box-shadow: 0 8px 18px rgba(0,0,0,0.25);
