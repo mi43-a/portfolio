@@ -203,15 +203,16 @@ ol li::before {
 }
 
 ol li {
-  padding: 0 0 0 0.5em !important; 
-  text-indent: 0 !important;
   padding: 0 !important; 
+  text-indent: 0 !important;
   margin: 0 !important;
+  margin-top: 2px !important; 
+  margin-bottom: 2px !important;
+  padding-left: 2em !important;
 }
 
 ol {
   list-style: decimal !important; 
-  padding-left: 1.5em !important;
 }
 
 ul li, ol li {
