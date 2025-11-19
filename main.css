@@ -116,6 +116,39 @@ img {
   border-radius: 20px;
 }
 
+/* 写真ギャラリー全体を中央に配置 */
+.photo-gallery {
+  display: flex; 
+  flex-direction: column; /* 縦方向に並べる */
+  align-items: center; /* 水平方向（中央）に配置 */
+  justify-content: center; /* 垂直方向（中央）に配置 */
+  width: 100%; /* 親要素の幅いっぱいに広げる */
+  max-width: 600px; /* ギャラリーの最大幅を設定（適宜調整） */
+  margin: 40px auto; /* 上下に40pxのマージン、左右は自動で中央寄せ */
+}
+
+/* ギャラリー内の写真のスタイル */
+.photo-gallery img:not(.arrow-image) {
+  max-width: 90%; /* 写真の最大幅を調整 */
+  height: auto;
+  margin-bottom: 20px; /* 写真の下に少し余白 */
+  border-radius: 10px; /* 角を丸くする */
+}
+
+/* 矢印画像のスタイル */
+.photo-gallery .arrow-image {
+  width: 80px; /* 矢印の幅を調整（適宜調整） */
+  height: auto;
+  margin: 10px 0; /* 矢印の上下に余白 */
+  opacity: 0.7; /* 矢印を少し透明にする（背面透過とは異なるが、目立ちすぎないように） */
+  box-shadow: none; 
+  border-radius: 0; 
+}
+
+.photo-gallery img:last-child {
+  margin-bottom: 0;
+}
+
 strong {
   font-style: normal;
   font-weight: normal;
