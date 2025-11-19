@@ -121,10 +121,22 @@ img {
   display: flex; 
   flex-direction: column; /* 縦方向に並べる */
   align-items: center; /* 水平方向（中央）に配置 */
-  justify-content: center; /* 垂直方向（中央）に配置 */
   width: 100%; /* 親要素の幅いっぱいに広げる */
   max-width: 600px; /* ギャラリーの最大幅を設定（適宜調整） */
   margin: 40px auto; /* 上下に40pxのマージン、左右は自動で中央寄せ */
+  position: relative;
+}
+
+.photo-item-container {
+  position: relative; /* 矢印の絶対配置の基準にする */
+  width: 100%; /* 親（.photo-gallery）の幅に合わせる */
+  display: flex; /* 内部をFlexboxにして中央寄せしやすくする */
+  justify-content: center; /* 写真を中央に寄せる */
+  margin-bottom: 20px; /* 各写真コンテナの下に隙間 */
+}
+
+.photo-gallery .last-photo {
+  margin-bottom: 0;
 }
 
 /* ギャラリー内の写真のスタイル */
@@ -135,18 +147,55 @@ img {
   border-radius: 10px; /* 角を丸くする */
 }
 
+.photo-gallery .main-photo {
+  max-width: 90%; /* 写真の最大幅を大きくする（親コンテナに対して90%） */
+  width: 600px; /* 具体的な幅を指定して大きくする（適宜調整） */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 0; /* 親コンテナが管理するので不要 */
+}
+
 /* 矢印画像のスタイル */
 .photo-gallery .arrow-image {
-  width: 80px; /* 矢印の幅を調整（適宜調整） */
+  position: absolute;
+  width: 100px; /* 矢印の幅を調整（適宜調整） */
   height: auto;
-  margin: 10px 0; /* 矢印の上下に余白 */
-  opacity: 0.7; /* 矢印を少し透明にする（背面透過とは異なるが、目立ちすぎないように） */
-  box-shadow: none; 
-  border-radius: 0; 
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1; /* 矢印を少し透明にする（背面透過とは異なるが、目立ちすぎないように） */
+  box-shadow: none !important; 
+  border-radius: 0 !important;
+}
+
+/* 1枚目の矢印（右にずらす） */
+.photo-gallery .arrow-right {
+  right: 10%; /* 右端から10%の位置に配置（適宜調整） */
+  left: auto; /* 左寄せ指定をリセット */
+}
+
+/* 2枚目の矢印（左にずらす） */
+.photo-gallery .arrow-left {
+  left: 10%; /* 左端から10%の位置に配置（適宜調整） */
+  right: auto; /* 右寄せ指定をリセット */
 }
 
 .photo-gallery img:last-child {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) { /* タブレット以下のサイズで調整 */
+  .photo-gallery .arrow-image {
+    width: 60px; /* モバイルでは矢印をさらに小さく */
+    top: auto;
+    bottom: -30px; /* 写真の下に配置 */
+    left: 50%; /* 中央に寄せる */
+    right: auto;
+    transform: translateX(-50%); /* 自身の幅の半分だけ左にずらして厳密な中央にする */
+  }
+  .photo-item-container {
+    margin-bottom: 40px; /* モバイルでは写真間のマージンを少し大きく */
+  }
 }
 
 strong {
