@@ -172,12 +172,14 @@ img {
 .photo-gallery .arrow-right {
   right: 10%; /* 右端から10%の位置に配置（適宜調整） */
   left: auto; /* 左寄せ指定をリセット */
+  transform: translateY(-50%) rotate(180deg) scaleX(-1);
 }
 
 /* 2枚目の矢印（左にずらす） */
 .photo-gallery .arrow-left {
   left: 10%; /* 左端から10%の位置に配置（適宜調整） */
   right: auto; /* 右寄せ指定をリセット */
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .photo-gallery img:last-child {
@@ -195,6 +197,13 @@ img {
   }
   .photo-item-container {
     margin-bottom: 40px; /* モバイルでは写真間のマージンを少し大きく */
+  }
+  .photo-gallery .arrow-right {
+      transform: translateX(-50%) rotate(180deg) scaleX(-1); 
+  }
+  /* モバイルで左矢印を回転させる場合 */
+  .photo-gallery .arrow-left {
+      transform: translateX(-50%) rotate(180deg);
   }
 }
 
