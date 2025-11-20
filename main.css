@@ -55,7 +55,8 @@ html {
 
 body {
   
-  background: #e8f5ef; /* くすみミント系の淡い背景 */
+  /*background: #e8f5ef; /* くすみミント系の淡い背景 */
+  background: linear-gradient(180deg, #e8f5ef 0%, var(--theme-color-1) 100%);
   color: #333;
   line-height: 1.5;
   word-wrap: break-word;
