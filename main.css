@@ -377,9 +377,9 @@ ul li, ol li {
 
 .melonpan {
   position: absolute; /* 親 (.photo-grid-4x4) を基準に絶対配置 */
-  width: 50px; /* イラストのサイズ (調整可) */
+  width: 80px; /* イラストのサイズ (調整可) */
   height: auto;
-  opacity: 0.7; 
+  opacity: 0.9; 
   z-index: 5; 
   pointer-events: none; 
 }
@@ -395,13 +395,13 @@ ul li, ol li {
 }
 .melonpan-3 {
   bottom: 5%; /* ギャラリーの下から 5% */
-  left: -20px; /* ギャラリーの左端より少し左 */
-  transform: rotate(5deg); /* 少し回転させる */
+  left: -30px; /* ギャラリーの左端より少し左 */
+  transform: rotate(15deg); /* 少し回転させる */
 }
 .melonpan-4 {
   bottom: -30px; /* ギャラリーの下端より少し下 */
   right: -50px; /* ギャラリーの右端より少し右 */
-  transform: rotate(-10deg); /* 少し回転させる */
+  transform: rotate(-20deg); /* 少し回転させる */
 }
 @media screen and (max-width: 768px) {
   .melonpan {
