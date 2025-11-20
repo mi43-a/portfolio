@@ -161,7 +161,7 @@ img {
   position: absolute;
   width: 100px; /* 矢印の幅を調整（適宜調整） */
   height: auto;
-  top: 55%;
+  top: 80%;
   transform: translateY(-50%);
   opacity: 1; /* 矢印を少し透明にする（背面透過とは異なるが、目立ちすぎないように） */
   box-shadow: none !important; 
