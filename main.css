@@ -338,3 +338,37 @@ ul li, ol li {
     box-shadow: 0 8px 18px rgba(0,0,0,0.25);
   }
 }
+
+.photo-grid-4x4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; /* 写真間の隙間 */
+    width: 100%;
+    max-width: 800px; /* ギャラリー全体の最大幅（調整可） */
+    margin: 40px auto; /* 中央寄せ */
+}
+.photo-item-4x4 {
+    width: 100%;
+    padding-bottom: 100%; 
+    height: 0; 
+    position: relative;
+    overflow: hidden; /* はみ出た部分を隠す（トリミング） */
+    border-radius: 10px;
+    border: 3px solid var(--theme-color-2); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+}
+.photo-item-4x4 .photo-to-fit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    box-shadow: none;
+    border-radius: 0;
+}
+@media screen and (max-width: 600px) {
+    .photo-grid-4x4 {
+        grid-template-columns: 1fr; /* スマホでは 1列にする */
+    }
+}
