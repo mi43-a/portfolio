@@ -170,16 +170,16 @@ img {
 
 /* 1枚目の矢印（右にずらす） */
 .photo-gallery .arrow-right {
-  right: 10%; /* 右端から10%の位置に配置（適宜調整） */
+  right: 5%; /* 右端から10%の位置に配置（適宜調整） */
   left: auto; /* 左寄せ指定をリセット */
-  transform: translateY(-50%) rotate(180deg) scaleX(-1);
+  transform: translateY(-50%) rotate(10deg) scaleX(-1);
 }
 
 /* 2枚目の矢印（左にずらす） */
 .photo-gallery .arrow-left {
-  left: 10%; /* 左端から10%の位置に配置（適宜調整） */
+  left: 5%; /* 左端から10%の位置に配置（適宜調整） */
   right: auto; /* 右寄せ指定をリセット */
-  transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(-10deg);
 }
 
 .photo-gallery img:last-child {
