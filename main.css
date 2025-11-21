@@ -72,25 +72,59 @@ h1 {
   font-size: 280%;
   padding: 0.2em 0.5em;
   letter-spacing: 0.1em;
-  text-shadow: #fff 2px 0, #fff -2px 0, #fff 0 -2px, #fff 0 2px, #fff 2px 2px,
+  /*text-shadow: #fff 2px 0, #fff -2px 0, #fff 0 -2px, #fff 0 2px, #fff 2px 2px,
     #fff -2px 2px, #fff 2px -2px, #fff -2px -2px, #fff 1px 2px, #fff -1px 2px,
     #fff 1px -2px, #fff -1px -2px, #fff 2px 1px, #fff -2px 1px, #fff 2px -1px,
     #fff -2px -1px, rgba(0, 0, 0, 0.5) 3px 3px 3px;
   background: var(--theme-color-2);
   box-shadow: 0px 0px 0px 5px var(--theme-color-2);
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 0px 0px 0px 5px var(--theme-color-2);
-  border: dashed 2px white;
+  border: dashed 2px white;*/
+  background: white; /* ページ背景を白に */
+  background-image: 
+    /* リングの線 (ページの上部に濃いテーマカラーの横線) */
+    linear-gradient(to bottom, var(--theme-color-2) 0, var(--theme-color-2) 2px, transparent 2px),
+    /* ページの行線（必要に応じて追加） */
+    linear-gradient(to bottom, var(--theme-color-1) 1px, transparent 1px);
+  background-size: 100% 30px, 100% 30px; /* リング線と行線のリピート間隔 */
+  background-repeat: repeat-y;
+  background-position: 0 50%; /* 行線の開始位置 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* ページに軽い影 */
+  border: 1px solid var(--theme-color-1); /* 淡い枠線 */
+  border-radius: 6px; /* 角を少し丸く */
+
+  /* 既存の text-shadow は削除またはシンプルに */
+  color: #333;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+  margin-top: 50px; /* リングのスペースを確保するために上マージンを追加 */
 }
 
-h1::after {
+h1::before {
+  content: "";
   position: absolute;
+  /* 💥 穴を左上に配置 */
+  top: -30px; 
+  left: 20px; /* 左端から 20px */
+  
+  /* 穴のサイズと色 */
+  width: 10px;
+  height: 10px;
+  background: var(--theme-color-1); /* 穴の色を淡いテーマカラーに */
+  border-radius: 50%; /* 完全な円 */
+  
+  /* 穴の右側に影をつけて立体感を出す */
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+  h1::after {
+  /*position: absolute;
   content: "";
   left: -7.5px;
   top: -7.5px;
   border-width: 0 0 1em 1em;
   border-style: solid;
   border-color: var(--theme-color-1) var(--theme-color-1) var(--theme-color-2);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);*/
 }
 
 h2 {
