@@ -105,13 +105,13 @@ h1 {
 h1::before {
   content: "";
   position: absolute;
-  top: -20px; 
+  top: -60px; 
   right: 0;
   left: 0px; 
   
   /* 穴のサイズと色 */
   width: 10px;
-  height: 40px;
+  height: 60px;
   background: repeating-linear-gradient(90deg, 
       transparent 0, transparent 20px, 
       #8d8d8d 20px, #8d8d8d 22px, /* リングの左側 */
@@ -124,7 +124,7 @@ h1::before {
   
   /* 穴の右側に影をつけて立体感を出す */
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  z-index: 0;
+  z-index: 2;
 }
 
   h1::after {
@@ -152,7 +152,7 @@ h1::before {
     );
   background-size: 40px 100%; /* 穴1つの幅と高さ */
   background-position: center bottom; /* 穴を下揃え */
-  z-index: 1; /* ページと同じか少し上 */
+  z-index: 3; 
   border-radius: 0 0 6px 6px; /* ページの下部に合わせる */
 }
 }
