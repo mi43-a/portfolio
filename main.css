@@ -95,7 +95,10 @@ h1 {
 
   /* 既存の text-shadow は削除またはシンプルに */
   color: #333;
-  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.8);
+  text-shadow: -1px -1px 0 #fff,  /* 左上 */
+     1px -1px 0 #fff,  /* 右上 */
+    -1px  1px 0 #fff,  /* 左下 */
+     1px  1px 0 #fff;  /* 右下 */;
   margin-top: 50px; /* リングのスペースを確保するために上マージンを追加 */
 }
 
