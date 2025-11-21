@@ -99,13 +99,12 @@ h1 {
      2px -2px 0 #fff,  /* 右上 */
     -2px  2px 0 #fff,  /* 左下 */
      2px  2px 0 #fff;  /* 右下 */;
-  margin-top: 50px; /* リングのスペースを確保するために上マージンを追加 */
+  margin-top: 60px; /* リングのスペースを確保するために上マージンを追加 */
 }
 
 h1::before {
   content: "";
   position: absolute;
-  /* 💥 穴を左上に配置 */
   top: -20px; 
   right: 0;
   left: 0px; 
