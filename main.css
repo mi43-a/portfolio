@@ -106,17 +106,26 @@ h1::before {
   content: "";
   position: absolute;
   /* 💥 穴を左上に配置 */
-  top: -30px; 
-  left: 20px; /* 左端から 20px */
+  top: -20px; 
+  right: 0;
+  left: 0px; 
   
   /* 穴のサイズと色 */
   width: 10px;
-  height: 10px;
-  background: var(--theme-color-1); /* 穴の色を淡いテーマカラーに */
+  height: 40px;
+  background: repeating-linear-gradient(90deg, 
+      transparent 0, transparent 20px, 
+      #8d8d8d 20px, #8d8d8d 22px, /* リングの左側 */
+      #c4c4c4 22px, #c4c4c4 25px, /* リングの右側 */
+      transparent 25px, transparent 40px /* 次のリングまでの間隔 */
+    );
+  background-size: 40px 100%; /* リング1つの幅と高さ */
+  background-position: center bottom; /* リングを下揃え */
   border-radius: 50%; /* 完全な円 */
   
   /* 穴の右側に影をつけて立体感を出す */
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  z-index: -1; /* ページの下に配置 */
 }
 
   h1::after {
@@ -128,6 +137,25 @@ h1::before {
   border-style: solid;
   border-color: var(--theme-color-1) var(--theme-color-1) var(--theme-color-2);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);*/
+  content: "";
+  position: absolute;
+  top: -1px; /* ページの上端の少し上に配置 */
+  left: 0;
+  right: 0;
+  height: 20px; /* 穴の高さ */
+  
+  /* 穴の繰り返しパターンを作成 */
+  background-image: 
+    repeating-linear-gradient(90deg, 
+      transparent 0, transparent 20px, 
+      #fff 20px, #fff 25px, /* 白い穴 */
+      transparent 25px, transparent 40px /* 次の穴までの間隔 */
+    );
+  background-size: 40px 100%; /* 穴1つの幅と高さ */
+  background-position: center bottom; /* 穴を下揃え */
+  z-index: 0; /* ページと同じか少し上 */
+  border-radius: 0 0 6px 6px; /* ページの下部に合わせる */
+}
 }
 
 h2 {
