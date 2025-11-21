@@ -83,14 +83,15 @@ h1 {
 }
 
 h1::after {
-  position: absolute;
+  content: none;
+  /*position: absolute;
   content: "";
   left: -7.5px;
   top: -7.5px;
   border-width: 0 0 1em 1em;
   border-style: solid;
   border-color: var(--theme-color-1) var(--theme-color-1) var(--theme-color-2);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);*/
 }
 
 h2 {
