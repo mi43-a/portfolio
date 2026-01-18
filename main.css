@@ -383,3 +383,17 @@ ul li, ol li {
   z-index: 5; 
   pointer-events: none; 
 }
+
+.video-wrapper {
+  max-width: 900px;      /* 画面いっぱいに広がらないよう制限 */
+  margin: 40px auto;     /* 上下に余白を作り、左右中央寄せ */
+  border-radius: 15px;   /* 角を丸くする */
+  overflow: hidden;      /* 子要素の動画も角を丸く切り取る */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* 柔らかい影 */
+}
+
+.video-wrapper video {
+  display: block;        /* 下部に謎の隙間ができるのを防ぐ */
+  width: 100%;           /* 親要素の幅に合わせる */
+  height: auto;
+}
